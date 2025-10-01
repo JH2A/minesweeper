@@ -1,6 +1,39 @@
-<div class="left">
-  <div class="mikuru-container">
-    <img src="Mikuru.png" alt="水素みくる" class="mikuru" />
-    <div id="mikuru-message" class="message-box"></div>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>水素マインスイーパー</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- 左側：キャラクター -->
+    <div class="left">
+      <div class="mikuru-container">
+        <img src="Mikuru.png" alt="水素みくる" class="mikuru" />
+        <!-- 吹き出し -->
+        <div id="mikuru-message"></div>
+      </div>
+    </div>
+
+    <!-- 中央：ゲーム -->
+    <div class="center">
+      <h1>水素マインスイーパー</h1>
+      <div id="game"></div>
+    </div>
+
+    <!-- 右側：操作方法 -->
+    <div class="right">
+      <h2>操作方法 🧭</h2>
+      <ul>
+        <li>🖱️ 左クリック：マスを開く</li>
+        <li>🏳️ 右クリック：旗を立てる・外す</li>
+        <li>🎯 目標：CO₂を避けて全てのマスを開こう！</li>
+      </ul>
+    </div>
   </div>
-</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
