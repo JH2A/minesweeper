@@ -1,15 +1,22 @@
-body {
-  font-family: sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  font-family: sans-serif;
   background-image: url('grassland.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 .container {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
@@ -27,6 +34,7 @@ body {
 h1 {
   color: #ffffff;
   text-shadow: 1px 1px 4px #333;
+  margin-top: 0;
 }
 
 .mikuru {
@@ -41,16 +49,18 @@ h1 {
 
 #mikuru-message {
   position: absolute;
-  top: 30px;
-  right: 220px;
-  background: #fff;
+  top: 0;
+  left: -260px;
+  background: #ffffffee;
   padding: 10px;
   border-radius: 10px;
   border: 2px solid #1b76d2;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
   min-width: 220px;
+  max-width: 300px;
   display: none;
   text-align: left;
+  z-index: 10;
 }
 
 #mikuru-message.show {
@@ -95,7 +105,7 @@ h1 {
 }
 
 .right {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
   border-radius: 10px;
   padding: 20px;
   max-width: 250px;
