@@ -58,11 +58,7 @@ function flagCell(e) {
 }
 
 function countAdjacentBombs(index) {
-  const adj = [
-    -1, 1, -width, width,
-    -width - 1, -width + 1,
-    width - 1, width + 1,
-  ];
+  const adj = [-1, 1, -width, width, -width - 1, -width + 1, width - 1, width + 1];
   let count = 0;
 
   for (let i of adj) {
