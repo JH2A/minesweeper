@@ -1,37 +1,56 @@
 body {
   font-family: sans-serif;
-  text-align: center;
   margin: 0;
+  padding: 0;
+  background-image: url('grassland.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 20px;
-  background-color: #f0f8ff;
+  gap: 20px;
+}
+
+.left, .center, .right {
+  flex: 1;
+}
+
+.center {
+  text-align: center;
 }
 
 h1 {
-  color: #1b76d2;
+  color: #ffffff;
+  text-shadow: 1px 1px 4px #333;
 }
 
 .mikuru {
   width: 200px;
-  margin-bottom: 10px;
 }
 
 .mikuru-container {
   position: relative;
   display: inline-block;
+  margin-top: 20px;
 }
 
 #mikuru-message {
   position: absolute;
-  top: -80px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 30px;
+  right: 220px;
   background: #fff;
   padding: 10px;
   border-radius: 10px;
   border: 2px solid #1b76d2;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-  min-width: 250px;
+  min-width: 220px;
   display: none;
+  text-align: left;
 }
 
 #mikuru-message.show {
@@ -73,4 +92,21 @@ h1 {
 .cell.flag {
   background-color: #b2ebf2;
   color: #00796b;
+}
+
+.right {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 250px;
+}
+
+.right h2 {
+  margin-top: 0;
+  color: #1b76d2;
+}
+
+.right ul {
+  text-align: left;
+  padding-left: 20px;
 }
