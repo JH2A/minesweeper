@@ -13,6 +13,7 @@ function createBoard() {
 
   game.innerHTML = '';
   cells.length = 0;
+
   for (let i = 0; i < width * height; i++) {
     const cell = document.createElement('div');
     cell.classList.add('cell');
@@ -58,12 +59,23 @@ function flagCell(e) {
 }
 
 function countAdjacentBombs(index) {
-  const adj = [-1, 1, -width, width, -width - 1, -width + 1, width - 1, width + 1];
+  const x = index % width;
+  const y = Math.floor(index / width);
   let count = 0;
 
-  for (let i of adj) {
-    const target = cells[index + i];
-    if (target && target.dataset.value === 'CO2') count++;
+  for (let dx = -1; dx <= 1; dx++) {
+    for (let dy = -1; dy <= 1; dy++) {
+      if (dx === 0 && dy === 0) continue;
+      const nx = x + dx;
+      const ny = y + dy;
+
+      if (nx >= 0 && nx < width && ny >= 0 && ny < height) {
+        const nIndex = ny * width + nx;
+        if (cells[nIndex] && cells[nIndex].dataset.value === 'CO2') {
+          count++;
+        }
+      }
+    }
   }
 
   return count;
