@@ -83,7 +83,7 @@ function countAdjacentBombs(index) {
 
 function gameOver() {
   gameEnded = true;
-  showMessage('💥 残念！CO₂が漏れてきちゃったよ！！');
+  showMessage('💥 残念！CO2が漏れてきちゃったよ！！');
   for (let cell of cells) {
     cell.removeEventListener('click', clickCell);
     if (cell.dataset.value === 'CO2') {
@@ -100,7 +100,7 @@ function checkWinCondition() {
   );
   if (unrevealed.length === 0) {
     gameEnded = true;
-    showMessage('🎉 クリアおめでとう！！ 応募キーワードは “水素キングダム” だよ');
+    showMessage('🎉 クリアおめでとう！！　応募キーワードは”水素キングダム”だよ');
     for (let cell of cells) {
       cell.removeEventListener('click', clickCell);
     }
